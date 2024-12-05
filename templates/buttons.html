@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons</title>
+
+
+    <style>
+        button {
+            font-size: 30px; /* 调整按钮上的文本大小 */
+            width: 120px; /* 调整按钮的宽度 */
+            height: 120px; /* 调整按钮的高度 */
+            margin: 20px; /* 添加右边间隔 */
+        }
+    </style>
+</head>
+<body>
+    <h1 style="font-size:30px;">控制系統</h1>
+    <div>
+        <button onclick="location.href='{{ url_for('button_open') }}'; alert('執行 開鎖...');">開鎖</button>
+        <button onclick="location.href='{{ url_for('button_up') }}'; alert('執行 上...');">上</button>
+    </div>
+    <div>
+        <button onclick="location.href='{{ url_for('button_lock') }}'; alert('執行 鎖定...');">鎖定</button>
+        <button onclick="location.href='{{ url_for('button_down') }}'; alert('執行 下...');">下</button>
+    </div>
+</body>
+</html>
+

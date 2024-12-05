@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <style>
+        button {
+            font-size: 30px; /* 调整按钮上的文本大小 */
+            width: 80px; /* 调整按钮的宽度 */
+            height: 80px; /* 调整按钮的高度 */
+        }
+    </style>
+    <script>
+        function appendToPassword(value) {
+            var passwordField = document.getElementById('password');
+            passwordField.value += value;
+        }
+
+        function clearPassword() {
+            var passwordField = document.getElementById('password');
+            passwordField.value = '';
+        }
+    </script>
+</head>
+<body>
+    <form action="/buttons" method="post">
+        <h2 style="font-size:30px;">登入介面</h2>
+        <label for="password" style="font-size:30px;">Password:</label>
+        <input type="text" name="password" id="password" readonly required style="font-size:30px; width: 200px;">
+        <br>
+        <button type="button" onclick="appendToPassword('1')">1</button>
+        <button type="button" onclick="appendToPassword('2')">2</button>
+        <button type="button" onclick="appendToPassword('3')">3</button>
+        <br>
+        <button type="button" onclick="appendToPassword('4')">4</button>
+        <button type="button" onclick="appendToPassword('5')">5</button>
+        <button type="button" onclick="appendToPassword('6')">6</button>
+        <br>
+        <button type="button" onclick="appendToPassword('7')">7</button>
+        <button type="button" onclick="appendToPassword('8')">8</button>
+        <button type="button" onclick="appendToPassword('9')">9</button>
+        <br>
+        <button type="button" onclick="appendToPassword('0')">0</button>
+        <button type="button" onclick="clearPassword()">清除</button>
+        <button type="submit">確認</button>
+    </form>
+</body>
+</html>
